@@ -1,5 +1,6 @@
 class BooksController < ApplicationController
   def index
+    @books = Book.all
   end
 
   def new
@@ -9,7 +10,11 @@ class BooksController < ApplicationController
   def create
     book = Book.new(book_params)
     book.save!
-    redirect_to books_url, notice: "ブック「＃｛book．name｝」を登録しました。"
+    redirect_to books_url, notice:  "ブック#「{book.name} 」を登録しました。"
+  end
+
+  def show
+    @book = Book.find(params[:id])
   end
 
   private
