@@ -19,3 +19,5 @@ table.table.table.hover
     tr
       th= Book.human_attribute_name(:updated_at)
       td= @book.updated_at
+
+= link_to '編集', edit_book_path, class: 'bth bth-primary mr-3'
