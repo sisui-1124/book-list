@@ -10,7 +10,7 @@ class BooksController < ApplicationController
   def create
     book = Book.new(book_params)
     book.save!
-    redirect_to books_url, notice:  "ブック#「{book.name} 」を登録しました。"
+    redirect_to books_url, notice: "ブック「#{book.name}」を登録しました"
   end
 
   def show
@@ -24,7 +24,7 @@ class BooksController < ApplicationController
   def update
     book = Book.find(params[:id])
     book.update!(book_params)
-    redirect_to books_url,notice: "ブック「#{book.name}」を更新しました"
+    redirect_to books_url, notice: "ブック「#{book.name}」を更新しました"
   end
 
   def destroy
@@ -34,8 +34,9 @@ class BooksController < ApplicationController
   end
 
   private
-
+  
   def book_params
     params.require(:book).permit(:name, :description)
   end
+
 end

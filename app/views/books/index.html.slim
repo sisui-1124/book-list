@@ -15,5 +15,5 @@ table.table.table-hover
         td= link_to book.name, book
         td= book.created_at
         td
-          = link_to '編集', edit_book_path(book), class: 'btn bth-primary mr-3'
-          = link_to '削除',  book, method: :delete, data: {confirm: "ブック「#{book.name}」を削除しますよろしいですか？"}, class: 'btn btn-danger'
+          = link_to '編集', edit_book_path(book), class: 'btn btn-primary mr-3'
+          = link_to '削除', book, method: :delete, data: { confirm: "ブック「#{book.name}」を削除しますよろしいですか？" }, class: 'btn btn-danger'
