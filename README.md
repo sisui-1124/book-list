@@ -1,24 +1,28 @@
-# README
+# book-list
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 機能の紹介
 
-Things you may want to cover:
+## トップ画面
 
-* Ruby version
+## 本の新規登録画面
 
-* System dependencies
+## 編集画面
 
-* Configuration
+## 主な機能
+-  読んだ本の情報を登録しておくアプリです。
 
-* Database creation
+## 使用技術
 
-* Database initialization
+## 言語フレーム
 
-* How to run the test suite
+### バックエンド
+- Ruby On Rails
 
-* Services (job queues, cache servers, search engines, etc.)
+### フロントエンド
+- HTML
+- CSS
 
-* Deployment instructions
+## 今後実装機能
+ - 本の表紙の登録機能
 
-* ...
+ ### URL
