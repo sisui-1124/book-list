@@ -5,6 +5,7 @@ class CreateBooks < ActiveRecord::Migration[6.1]
       t.text :description
 
       t.timestamps
+      t.index :name, unique: true
     end
   end
 end

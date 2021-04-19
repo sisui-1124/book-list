@@ -1,6 +1,6 @@
 class Book < ApplicationRecord
-  # validates :name,  presence: true, lenght: { maximum: 30}
-  # validates :validate_name_not_including_comma
+  validates :name,  presence: true
+  validate :validate_name_not_including_comma
 
   private
 
