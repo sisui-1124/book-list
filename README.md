@@ -16,11 +16,13 @@
 ## 言語フレーム
 
 ### バックエンド
-- Ruby On Rails
+- Ruby
 
 ### フロントエンド
 - HTML
-- CSS
+- SCSS
+- slim
+- javascript
 
 ## 今後実装機能
  - 本の表紙の登録機能
