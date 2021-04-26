@@ -10,21 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_23_144541) do
+ActiveRecord::Schema.define(version: 2021_04_26_065053) do
 
-  create_table "books", charset: "utf8mb4", force: :cascade do |t|
+  create_table "books", charset: "utf8", force: :cascade do |t|
     t.string "name", limit: 30, null: false
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_books_on_name", unique: true
   end
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+  create_table "users", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
     t.string "password_digest", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "admin", default: false, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
