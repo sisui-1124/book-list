@@ -6,11 +6,11 @@ h1 ユーザー一覧
 table.table.table-hover
   thead. thead-default
     tr
-      th= Usre.human_attribute_name(:name)
-      th= Usre.human_attribute_name(:email)
-      th= Usre.human_attribute_name(:admin)
-      th= Usre.human_attribute_name(:created_at)
-      th= Usre.human_attribute_name(:updated_at)
+      th= User.human_attribute_name(:name)
+      th= User.human_attribute_name(:email)
+      th= User.human_attribute_name(:admin)
+      th= User.human_attribute_name(:created_at)
+      th= User.human_attribute_name(:updated_at)
       th
   tbody
     - @users.each do |user|
