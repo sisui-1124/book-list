@@ -6,10 +6,18 @@ html
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track ': 'reload'
-  body
-    .app-title.navbar.navbar-expand-md.navbar-light.bg-light
-      .navbar-brand Book list
-    .container
-      - if flash.notice.present?
-      .alert.alert-success= flash.notice
-      = yield
+    body
+        .app-title.navbar.navbar-expand-md.navbar-light.bg-light
+          .navbar-brand Book list
+
+          ul .navbar -nav.ml-auto
+            - if current_user
+              li .nav-item= link_to 'ブック一覧' , books_path, class: 'nav-link'
+              li .nav-item= link_to 'ユーザー一覧' , admin_users_path, class: 'nav-link'
+              li .nav-item= link_to 'ログアウト' , logout_path, method: :delete, class: 'nav-link'
+            - else
+              li .nav-item= link_to 'ログイン' , login_path,method: :delete, class: 'nav-link'
+        .container
+          - if flash.notice.present?
+          .alert.alert-success= flash.notice
+          = yield
