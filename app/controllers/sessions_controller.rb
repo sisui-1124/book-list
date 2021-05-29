@@ -18,9 +18,10 @@ class SessionsController < ApplicationController
   def destroy
     reset_session
     redirect_to root_url, notice: 'ログアウトしました。'
-end
+  end
 
-private
+
+ private
 
   def session_params
     params.require(:session).permit(:email, :password)
