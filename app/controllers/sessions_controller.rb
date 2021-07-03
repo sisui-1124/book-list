@@ -20,7 +20,6 @@ class SessionsController < ApplicationController
     redirect_to root_url, notice: 'ログアウトしました。'
   end
 
-
  private
 
   def session_params
