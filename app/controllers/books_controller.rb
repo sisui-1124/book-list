@@ -42,7 +42,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:name, :description)
+    params.require(:book).permit(:name, :description, :img, :remove_img)
   end
 
   def set_book
