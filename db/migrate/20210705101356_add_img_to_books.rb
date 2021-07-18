@@ -1,5 +1,5 @@
 class AddImgToBooks < ActiveRecord::Migration[6.1]
   def change
-    add_column :books, :img, :string
+    rename_column :books, :image
   end
 end

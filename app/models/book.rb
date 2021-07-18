@@ -3,7 +3,8 @@ class Book < ApplicationRecord
   validates :name,  presence: true
   validate :validate_name_not_including_comma
   mount_uploader :image, ImageUploader
-  
+  has_many_attached :images
+
   belongs_to :user
 
   scope :recent, -> { order(created_at: :desc) }
