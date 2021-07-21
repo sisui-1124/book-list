@@ -34,7 +34,7 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    current_user.book.find(params[:id])
+    current_user.books.find(params[:id])
     book.destroy
     redirect_to books_url, notice: "ブック「#{book.name}」を削除しました"
   end
@@ -42,7 +42,7 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:name, :description, :image, :remove_image)
+    params.require(:book).permit(:name, :description, :image,:remove_image)
   end
 
   def set_book
