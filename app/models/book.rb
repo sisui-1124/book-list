@@ -1,10 +1,20 @@
 class Book < ApplicationRecord
-  # validates :name,  presence: true, lenght: { maximum: 30}
-  # validates :validate_name_not_including_comma
+  before_validation :set_nameless_name
+  validates :name,  presence: true
+  validate :validate_name_not_including_comma
+  mount_uploader :image, ImageUploader
+  has_many_attached :images
 
+  belongs_to :user
+
+  scope :recent, -> { order(created_at: :desc) }
+  
   private
 
   def validate_name_not_including_comma
     errors.add(:name,'にカンマを含めることはできません') if name&.include?(',')
+  end
+  def set_nameless_name
+    self.name = '名前無し' if name.blank?
   end
 end
