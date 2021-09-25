@@ -1,4 +1,5 @@
 # book-list
+![book](https://free-materials.com/adm/wp-content/uploads/2017/02/adDSC_9313-750x499.jpg)
 
 # 機能の紹介
 
@@ -16,13 +17,17 @@
 ## 言語フレーム
 
 ### バックエンド
-- Ruby On Rails
+- Ruby
 
 ### フロントエンド
 - HTML
-- CSS
+- SCSS
+- slim
+- javascript
 
 ## 今後実装機能
  - 本の表紙の登録機能
+ - ユーザー登録機能
+ - ログイン機能
 
  ### URL
